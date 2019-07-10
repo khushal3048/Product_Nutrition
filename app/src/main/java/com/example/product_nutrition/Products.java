@@ -1,5 +1,12 @@
 package com.example.product_nutrition;
 
+/*
+ *
+ * Product Class used for display Product Data Into ListView
+ * Data that we get from API
+ * In this Class, There is only Getter and Setter Methods to Get data about product and Set Data of Product one by one
+ *
+*/
 public class Products {
 
     String product_name, product_image;

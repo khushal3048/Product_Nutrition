@@ -7,7 +7,14 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
+/*
+ *
+ * SplashScreen Class Is Used for Animation on First Screen of the App
+ * In this Class, We define Animation object to get Animation effect From transition file that we made for animation
+ * All Animation Apply on Application logo
+ * After some duration of time we transfer control to MainActivity Screen
+ *
+*/
 public class SplashScreen extends AppCompatActivity {
 
     ImageView app_logo;
