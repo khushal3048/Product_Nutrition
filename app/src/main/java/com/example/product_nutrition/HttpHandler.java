@@ -10,7 +10,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+/*
+ *
+ * HTTPHANDLER Class is used for Handling API Response
+ * It Covert Json Data into Iterable Data That we can use after to Display in ListView
+ *
+*/
 public class HttpHandler {
 
     public HttpHandler() {

@@ -2,6 +2,13 @@ package com.example.product_nutrition;
 
 import android.os.AsyncTask;
 
+
+/*
+ *
+ * Class for synchronize JSON Data into Service Call Method
+ * doInBackground Method Call from MainActivity.Java for implement the methos for Calling API Link
+ *
+*/
 public class Asycdata extends AsyncTask<String,Void,String> {
 
 
