@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ListAdapter adapt;
     ArrayList<Products> pro;
 
-    String product_name, product_image, image_back, ingredients, origin, unit;
-    long qty;
+    String product_name, product_image, image_back, nutrition, unit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,32 +59,27 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject objOrigin = childObj.getJSONObject("origin_translations");
 
                 product_name = ProductName.getString("en");
-               // ingredients = objingre.getString("en");
-                ingredients = "Ingredients";
-                //origin = objOrigin.getString("en");
-                origin = "Country Of Origin";
+                nutrition = "Nutrition";
                 unit = childObj.getString("unit");
-                qty = childObj.getLong("quantity");
-
 
                 for (int j = 0; j < ProductImage.length(); j++){
 
                     JSONObject ProImg = ProductImage.getJSONObject(j);
                     if(j == 1){
 
-                        product_image = ProImg.getString("thumb");
+                        product_image = ProImg.getString("large");
 
                     }
 
                     if(j == 2){
 
-                        image_back = ProImg.getString("thumb");
+                        image_back = ProImg.getString("large");
 
                     }
 
                 }
 
-                pro.add(new Products(product_name,product_image,image_back,ingredients,origin,unit,qty));
+                pro.add(new Products(product_name,product_image,image_back,nutrition,unit));
 
             }
 
