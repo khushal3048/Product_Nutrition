@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Product Nutrition</string>
     <string name="api_link">https://www.foodrepo.org/api/v3/products/</string>
-    <string name="api_key">29d627b7563f2318bae73d77a6bc11e5</string>
 </resources>

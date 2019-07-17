@@ -30,7 +30,7 @@ public class HttpHandler {
             URL url = new URL(api_url);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
-           // connection.setRequestProperty("Content-type","application/json");
+            connection.setRequestProperty("Content-type","application/json");
             connection.setRequestProperty("Authorization", "Token token=29d627b7563f2318bae73d77a6bc11e5");
             // Read Response from API
 

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Product_Details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetails">
+
+
+    <TextView
+        android:id="@+id/txt_Pname"
+        android:layout_width="347dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="32sp" />
+
+    <ImageView
+        android:id="@+id/img_Front"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Pname"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Pname"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="46dp"
+        android:layout_toEndOf="@+id/img_Front"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lbl_ingredients"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_Front"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="57dp"
+        android:text="Product Ingredients"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_Ingredients"
+        android:layout_width="254dp"
+        android:layout_height="98dp"
+        android:layout_below="@+id/lbl_ingredients"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="77dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_Origin"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_below="@+id/txt_Ingredients"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="275dp"
+        android:text=" Origin : "
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_Origin"
+        android:layout_width="190dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/txt_Ingredients"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="49dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_Qty"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/lbl_Origin"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:text="Quantity : "
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_Qty"
+        android:layout_width="182dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/txt_Origin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="53dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_Unit"
+        android:layout_width="114dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lbl_Qty"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="23dp"
+        android:text="Unit : "
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_Unit"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/txt_Qty"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="93dp"
+        android:textSize="25sp" />
+
+</RelativeLayout>
