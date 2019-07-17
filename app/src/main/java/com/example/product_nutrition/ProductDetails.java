@@ -8,11 +8,12 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+
 public class ProductDetails extends AppCompatActivity {
 
-    TextView txt_Pname, txt_Ingredients, txt_Origin, txt_unit, txt_qty;
+    TextView txt_Pname, txt_Nutrition, txt_unit;
     ImageView img_front, img_back;
-    String Pname, ingredients, origin, unit;
+    String Pname, nutrition , unit;
     long qty;
 
     @Override
@@ -20,11 +21,10 @@ public class ProductDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
 
-        txt_Pname = findViewById(R.id.txt_pname);
-        txt_Ingredients = findViewById(R.id.txt_Ingredients);
-        txt_Origin = findViewById(R.id.txt_Origin);
-        txt_unit = findViewById(R.id.txt_Origin);
-        txt_qty = findViewById(R.id.txt_Qty);
+        txt_Pname = findViewById(R.id.txt_Pname);
+        txt_Nutrition = findViewById(R.id.txt_Nutrition);
+        txt_unit = findViewById(R.id.txt_Unit);
+
         img_front = findViewById(R.id.img_Front);
         img_back = findViewById(R.id.img_Back);
 
@@ -33,20 +33,15 @@ public class ProductDetails extends AppCompatActivity {
         Products p = i.getParcelableExtra("data");
 
         Pname = p.getProduct_name();
-        ingredients = p.getIngredients();
-        origin = p.getOrigin();
+        nutrition = p.getNutrition();
         unit = p.getUnit();
-        qty = p.getQty();
 
-        System.out.println("Data : " + Pname + " " + qty);
-       // txt_Pname.setText("Product Name");
-        /*txt_Ingredients.setText(ingredients);
-        txt_Origin.setText(origin);
+        txt_Pname.setText(Pname);
+        txt_Nutrition.setText(nutrition);
         txt_unit.setText(unit);
-        txt_qty.setText((int) qty);*/
 
-       // Picasso.get().load(p.getProduct_image()).into(img_front);
-        //Picasso.get().load(p.getImage_back()).into(img_back);
+        Picasso.get().load(p.getProduct_image()).into(img_front);
+        Picasso.get().load(p.getImage_back()).into(img_back);
 
 
     }

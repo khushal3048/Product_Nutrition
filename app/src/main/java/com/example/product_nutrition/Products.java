@@ -14,32 +14,30 @@ import android.os.Parcelable;
 */
 public class Products implements Parcelable {
 
-    String product_name, product_image, image_back, ingredients, origin, unit;
-    long qty;
+    String product_name, product_image, image_back, unit, nutrition;
+
 
     public Products(String product_name, String product_image) {
         this.product_name = product_name;
         this.product_image = product_image;
     }
 
-    public Products(String product_name, String product_image, String image_back, String ingredients, String origin, String unit, long qty) {
+    public Products(String product_name, String product_image, String image_back, String nutrition , String unit) {
         this.product_name = product_name;
         this.product_image = product_image;
         this.image_back = image_back;
-        this.ingredients = ingredients;
-        this.origin = origin;
+        this.nutrition = nutrition;
         this.unit = unit;
-        this.qty = qty;
+
     }
 
     protected Products(Parcel in) {
         product_name = in.readString();
         product_image = in.readString();
         image_back = in.readString();
-        ingredients = in.readString();
-        origin = in.readString();
+        nutrition=in.readString();
         unit = in.readString();
-        qty = in.readLong();
+
     }
 
     public static final Creator<Products> CREATOR = new Creator<Products>() {
@@ -78,20 +76,12 @@ public class Products implements Parcelable {
         this.image_back = image_back;
     }
 
-    public String getIngredients() {
-        return ingredients;
+    public String getNutrition() {
+        return nutrition;
     }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
+    public void setNutrition(String nutrition) {
+        this.nutrition = nutrition;
     }
 
     public String getUnit() {
@@ -102,13 +92,6 @@ public class Products implements Parcelable {
         this.unit = unit;
     }
 
-    public long getQty() {
-        return qty;
-    }
-
-    public void setQty(long qty) {
-        this.qty = qty;
-    }
 
 
     @Override
@@ -121,9 +104,8 @@ public class Products implements Parcelable {
         dest.writeString(product_name);
         dest.writeString(product_image);
         dest.writeString(image_back);
-        dest.writeString(ingredients);
-        dest.writeString(origin);
+       dest.writeString(nutrition);
         dest.writeString(unit);
-        dest.writeLong(qty);
+
     }
 }

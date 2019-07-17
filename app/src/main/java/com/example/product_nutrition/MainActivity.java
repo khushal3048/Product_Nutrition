@@ -57,9 +57,111 @@ public class MainActivity extends AppCompatActivity {
                 JSONArray ProductImage = childObj.getJSONArray("images");
                 JSONObject objingre = childObj.getJSONObject("ingredients_translations");
                 JSONObject objOrigin = childObj.getJSONObject("origin_translations");
+                JSONObject objNutri = childObj.getJSONObject("nutrients");
+
+                if (objNutri.has("protein")){
+
+                    JSONObject objProtein = objNutri.getJSONObject("protein");
+                    JSONObject objProteinName = objProtein.getJSONObject("name_translations");
+
+                    nutrition = objProteinName.getString("en");
+
+                }
+
+                    nutrition += " ";
+
+                if (objNutri.has("carbohydrates")){
+
+                    JSONObject objCarbo = objNutri.getJSONObject("carbohydrates");
+                    JSONObject objCarboName = objCarbo.getJSONObject("name_translations");
+
+                    nutrition += objCarboName.getString("en");
+
+                }
+
+                nutrition += " ";
+
+                if (objNutri.has("fat")){
+
+                    JSONObject objFat = objNutri.getJSONObject("fat");
+                    JSONObject objFatName = objFat.getJSONObject("name_translations");
+
+                    nutrition += objFatName.getString("en");
+
+                }
+
+                nutrition += " ";
+
+                if (objNutri.has("sodium")){
+
+                    JSONObject objSodium = objNutri.getJSONObject("sodium");
+                    JSONObject objSodiumName = objSodium.getJSONObject("name_translations");
+
+                    nutrition += objSodiumName.getString("en");
+
+                }
+
+                nutrition += " ";
+
+                if (objNutri.has("fiber")){
+
+                    JSONObject objFiber = objNutri.getJSONObject("fiber");
+                    JSONObject objFiberName = objFiber.getJSONObject("name_translations");
+
+                    nutrition += objFiberName.getString("en");
+
+                }
+
+                nutrition += " ";
+
+                if (objNutri.has("salt")){
+
+                    JSONObject objSalt = objNutri.getJSONObject("salt");
+                    JSONObject objSaltName = objSalt.getJSONObject("name_translations");
+
+                    nutrition += objSaltName.getString("en");
+
+                }
+
+                nutrition += " ";
+
+                if (objNutri.has("sugars")){
+
+                    JSONObject objSugar = objNutri.getJSONObject("sugars");
+                    JSONObject objSugarName = objSugar.getJSONObject("name_translations");
+
+                    nutrition += objSugarName.getString("en");
+
+                }
+
+                nutrition += " ";
+
+                if (objNutri.has("energy_kcal")){
+
+                    JSONObject objEnergyCal = objNutri.getJSONObject("energy_kcal");
+                    JSONObject objEnergyCalName = objEnergyCal.getJSONObject("name_translations");
+
+                    nutrition += objEnergyCalName.getString("en");
+
+
+                }
+
+                nutrition += " ";
+
+                if(objNutri.has("energy")){
+
+                    JSONObject objEnergy = objNutri.getJSONObject("energy");
+                    JSONObject objEnergyName = objEnergy.getJSONObject("name_translations");
+
+                    nutrition += objEnergyName.getString("en");
+
+                }
+
+
+
 
                 product_name = ProductName.getString("en");
-                nutrition = "Nutrition";
+                //nutrition = "Nutrition";
                 unit = childObj.getString("unit");
 
                 for (int j = 0; j < ProductImage.length(); j++){
