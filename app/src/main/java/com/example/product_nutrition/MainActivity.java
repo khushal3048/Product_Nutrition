@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject ProductName = childObj.getJSONObject("display_name_translations");
                 JSONArray ProductImage = childObj.getJSONArray("images");
-                JSONObject objingre = childObj.getJSONObject("ingredients_translations");
-                JSONObject objOrigin = childObj.getJSONObject("origin_translations");
                 JSONObject objNutri = childObj.getJSONObject("nutrients");
 
                 if (objNutri.has("protein")){
@@ -161,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 product_name = ProductName.getString("en");
-                //nutrition = "Nutrition";
                 unit = childObj.getString("unit");
 
                 for (int j = 0; j < ProductImage.length(); j++){
